@@ -10,6 +10,7 @@ import Reachability
 import RealmSwift
 import SCLAlertView
 import UIKit
+import Hero
 
 class MoviesViewController: UIViewController {
     // Realm
@@ -37,6 +38,8 @@ class MoviesViewController: UIViewController {
         setupNavigator()
         setupSearchController()
     }
+    
+   
 
     func setupSearchController() {
         let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

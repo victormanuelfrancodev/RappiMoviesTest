@@ -143,6 +143,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="uOg-2l-Hdf" secondAttribute="bottom" id="3mR-nA-erF"/>
                             <constraint firstItem="Dw6-TH-yQl" firstAttribute="top" secondItem="srh-vx-LeH" secondAttribute="top" id="7pT-sR-CTi"/>
@@ -179,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYl-K6-5Sp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-181.15942028985509" y="69.642857142857139"/>
+            <point key="canvasLocation" x="-42" y="50"/>
         </scene>
     </scenes>
     <resources>

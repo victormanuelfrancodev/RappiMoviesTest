@@ -203,6 +203,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="OTJ-vn-m7B"/>
                     <navigationItem key="navigationItem" id="Lrt-8i-Uwa"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="loadActivityIndicator" destination="Rc5-7f-X9f" id="Bon-fW-ye1"/>
                         <outlet property="movieCollectionView" destination="3fI-Ya-Xuo" id="M4v-TJ-opP"/>

@@ -8,6 +8,7 @@
 
 import Cosmos
 import UIKit
+import Hero
 
 class DetailViewController: UIViewController {
     @IBOutlet var movieUIImageView: UIImageView!
@@ -32,6 +33,7 @@ class DetailViewController: UIViewController {
     func setupData() {
         if let movie = movie, let poster_path = movie.poster_path {
             movieUIImageView.cacheImage(imageUrlString: poster_path)
+            movieUIImageView.hero.id = poster_path
             thumbMovieImageView.cacheImage(imageUrlString: poster_path)
             if let overview = movie.overview {
                 descrriptionTextView.text = overview
@@ -106,13 +108,5 @@ class DetailViewController: UIViewController {
         }
         
     }
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-     }
-     */
+        
 }

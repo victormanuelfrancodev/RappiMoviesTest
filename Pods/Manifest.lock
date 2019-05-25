@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.2)
   - Cosmos (19.0.3)
+  - Hero (1.4.0)
   - ReachabilitySwift (4.3.1)
   - Realm (3.15.0):
     - Realm/Headers (= 3.15.0)
@@ -13,6 +14,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Cosmos
+  - Hero
   - ReachabilitySwift
   - RealmSwift
   - SCLAlertView
@@ -22,6 +24,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Cosmos
+    - Hero
     - ReachabilitySwift
     - Realm
     - RealmSwift
@@ -31,12 +34,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
   RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 9116e17121aac4fea7cf846e7e7dbcd5d16bdd19
+PODFILE CHECKSUM: 2de70384c48c6df499a148f03d941e20a8c84ea0
 
 COCOAPODS: 1.6.0
