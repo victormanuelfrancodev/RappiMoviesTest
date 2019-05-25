@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  MovieRappiTest
+
+  Created by Victor Manuel Lagunas Franco on 5/23/19.
+  Copyright © 2019 Victor Manuel Lagunas Franco. All rights reserved.
+*/
+"Top Ranked" = "Top Ranked";
+"Upcoming" = "Upcoming";
+"Best Popularity" = "Best Popularity";
+"Popularity" = "Popularity";
+"Important info" = "Important info";
+"Could not start reachability notifier" = "Could not start reachability notifier";
+"Search movies" = "Search movies";
+"Empty List" = "Empty List";
+"Language" = "Language";
+
