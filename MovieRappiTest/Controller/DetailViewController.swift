@@ -18,11 +18,10 @@ class DetailViewController: UIViewController {
     @IBOutlet var thumbMovieImageView: UIImageView!
     @IBOutlet var rateCosmos: CosmosView!
     @IBOutlet var ratingLabel: UILabel!
-
     @IBOutlet var languageLabel: UILabel!
-
     @IBOutlet var adultMovieImageView: UIImageView!
     @IBOutlet var dateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigator()
@@ -65,6 +64,48 @@ class DetailViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.white
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.languageLabel.alpha = 0
+        self.dateLabel.alpha = 0
+        self.ratingLabel.alpha = 0
+        self.rateCosmos.alpha = 0
+        self.titleLabel.alpha = 0
+        self.descrriptionTextView.alpha = 0
+        self.descriptionLabel.alpha = 0
+        self.thumbMovieImageView.alpha = 0
+    }
+    override func viewDidAppear(_ animated: Bool) {
+         self.titleLabel.frame.origin.x = 700
+         self.dateLabel.frame.origin.x = 650
+         self.rateCosmos.frame.origin.x = 600
+         self.ratingLabel.frame.origin.x = 550
+         self.languageLabel.frame.origin.x = 500
+        
+         self.descrriptionTextView.frame.origin.y = 1200
+         self.descriptionLabel.frame.origin.y = 1000
+      
+        UIView.animate(withDuration: 0.5) {
+            self.languageLabel.frame.origin.x = 0
+            self.languageLabel.alpha = 1
+            self.ratingLabel.frame.origin.x = 0
+            self.ratingLabel.alpha = 1
+            self.rateCosmos.frame.origin.x = 0
+            self.rateCosmos.alpha = 1
+            self.dateLabel.frame.origin.x = 0
+            self.dateLabel.alpha = 1
+            self.titleLabel.frame.origin.x = 0
+            self.titleLabel.alpha = 1
+            self.thumbMovieImageView.alpha = 1
+        }
+        
+        UIView.animate(withDuration: 0.8){
+            self.descrriptionTextView.frame.origin.y = 20
+            self.descrriptionTextView.alpha = 1
+            self.descriptionLabel.frame.origin.y = 0
+            self.descriptionLabel.alpha = 1
+        }
+        
+    }
     /*
      // MARK: - Navigation
 
