@@ -9,8 +9,10 @@
 @testable import MovieRappiTest
 import XCTest
 
+
 class MovieRappiTestTests: XCTestCase {
     override func setUp() {
+        testApiRequest()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
