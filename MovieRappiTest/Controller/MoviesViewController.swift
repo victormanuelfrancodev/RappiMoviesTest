@@ -191,13 +191,15 @@ class MoviesViewController: UIViewController {
             })
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         let detailVC = segue.destination as! DetailViewController
         detailVC.movie = movieSelected
     }
+
 //    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
-      
-  //  }
+
+    //  }
 }
 
 extension MoviesViewController: UITabBarDelegate {
@@ -291,9 +293,9 @@ extension MoviesViewController: UISearchControllerDelegate, UISearchBarDelegate,
         dismiss(animated: true, completion: nil)
     }
 
-    func updateSearchResults(for searchController: UISearchController) {
+    func updateSearchResults(for _: UISearchController) {
         filtered = movies.filter { (movie) -> Bool in
-            if let title = movie.title{
+            if let title = movie.title {
                 let movies: String = title as String
                 if movies.lowercased().contains(self.searchController.searchBar.text!.lowercased()) {
                     return true
@@ -301,7 +303,7 @@ extension MoviesViewController: UISearchControllerDelegate, UISearchBarDelegate,
                     return false
                 }
             }
-          return false
+            return false
         }
 
         movieCollectionView.reloadData()

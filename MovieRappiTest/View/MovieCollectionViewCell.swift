@@ -28,15 +28,15 @@ class MovieCollectionViewCell: UICollectionViewCell {
         didSet {
             if let movie = movie {
                 titleMovieLabel.text = movie.title
-                if let poster_path = movie.poster_path{
+                if let poster_path = movie.poster_path {
                     movieImageView.cacheImage(imageUrlString: poster_path)
                 }
                 if let vote_average = movie.vote_average {
-                     starsCosmos.rating = vote_average * 5 / 10
-                     ratingLabel.text = String(vote_average)
+                    starsCosmos.rating = vote_average * 5 / 10
+                    ratingLabel.text = String(vote_average)
                 }
                 if let populary = movie.populary {
-                     viewsLabel.text = NSLocalizedString("Popularity", comment: "Popularity") + ": " + String(populary)
+                    viewsLabel.text = NSLocalizedString("Popularity", comment: "Popularity") + ": " + String(populary)
                 }
             }
         }
