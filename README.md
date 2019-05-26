@@ -27,3 +27,28 @@ Model
  View Model 
  
     Los modelos de vista reciben eventos de IU y realizan la lógica de negocios y proporcionan el resultado que se mostrará en la IU. Este es el componente que se encarga de manejar la lógica empresarial que controla la vista. Pero internamente no modifica la interfaz de usuario, ni tiene ninguna referencia a la vista. Posee el modelo de datos.
+    
+    MoviesModel Contiene el modelo de Movies
+    
+    VideoModel  Contiene el modelo de Video 
+    
+    MovieManager Hace el parseo de JSOn , aqui esta todo el parser de JSON para el objeto movie y la lógica empresarial
+    
+    VideoManager Hace el parseo de JSOn , aqui esta todo el parser de JSON para el objeto video y la lógica empresarial
+    
+ Capa de Comunicaciones: 
+ 
+ Esta capa es para gestionar la comunicación de la app, se puede ocupar librerias como alamofire
+ 
+ APIRequest : Es la clase encargada de las conexiones como hacer los request con alamofire. 
+ 
+ Helper 
+ 
+   Contiene clases que se ocupan como extensiones para poder volver a utilizar en otros proyectos o en el mismo proyecto
+ 
+ 
+ 
+
+  
+     
+ 
