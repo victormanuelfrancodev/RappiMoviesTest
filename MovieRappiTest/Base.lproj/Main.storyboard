@@ -63,7 +63,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99N-EF-IIb">
                                                     <rect key="frame" x="0.0" y="0.0" width="411" height="349"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3F1-en-XdD">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="palomitas" translatesAutoresizingMaskIntoConstraints="NO" id="3F1-en-XdD">
                                                             <rect key="frame" x="0.0" y="0.0" width="411" height="349"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
@@ -235,4 +235,7 @@
             <point key="canvasLocation" x="-181" y="70"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="palomitas" width="1024" height="683"/>
+    </resources>
 </document>
