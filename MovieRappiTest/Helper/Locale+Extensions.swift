@@ -8,7 +8,7 @@
 import Foundation
 
 extension Locale {
-    //obtiene el idioma es-Es cuando es 'es' y en-US cuando es en 'en'
+    // obtiene el idioma es-Es cuando es 'es' y en-US cuando es en 'en'
     static var preferredLanguageIdentifier: String {
         let id = Locale.preferredLanguages.first!
         let comps = Locale.components(fromIdentifier: id)

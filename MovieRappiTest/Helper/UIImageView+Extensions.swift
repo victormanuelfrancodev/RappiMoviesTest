@@ -11,7 +11,7 @@ import UIKit
 
 extension UIImageView {
     static let imageCache = NSCache<AnyObject, AnyObject>()
-//Obtiene la imagen del data url y lo almacena en cache
+    // Obtiene la imagen del data url y lo almacena en cache
     func cacheImage(imageUrlString: String) {
         let url = URL(string: imageUrlString)
         if let imageFromCache = UIImageView.imageCache.object(forKey: imageUrlString as AnyObject) as? UIImage {

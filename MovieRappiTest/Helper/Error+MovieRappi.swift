@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//codigo de erorres
+// codigo de erorres
 enum DefaultError: Error {
     case unknownError
 }
