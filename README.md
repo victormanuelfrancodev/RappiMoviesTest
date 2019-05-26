@@ -28,23 +28,48 @@ Model
  
     Los modelos de vista reciben eventos de IU y realizan la lógica de negocios y proporcionan el resultado que se mostrará en la IU. Este es el componente que se encarga de manejar la lógica empresarial que controla la vista. Pero internamente no modifica la interfaz de usuario, ni tiene ninguna referencia a la vista. Posee el modelo de datos.
     
-    MoviesModel Contiene el modelo de Movies
+   
+   -MoviesModel Contiene el modelo de Movies
+   
+   -VideoModel  Contiene el modelo de Video 
     
-    VideoModel  Contiene el modelo de Video 
+   -MovieManager Hace el parseo de JSOn , aqui esta todo el parser de JSON para el objeto movie y la lógica empresarial
     
-    MovieManager Hace el parseo de JSOn , aqui esta todo el parser de JSON para el objeto movie y la lógica empresarial
-    
-    VideoManager Hace el parseo de JSOn , aqui esta todo el parser de JSON para el objeto video y la lógica empresarial
+   -VideoManager Hace el parseo de JSOn , aqui esta todo el parser de JSON para el objeto video y la lógica empresarial
     
  Capa de Comunicaciones: 
  
- Esta capa es para gestionar la comunicación de la app, se puede ocupar librerias como alamofire
+     Esta capa es para gestionar la comunicación de la app, se puede ocupar librerias como alamofire
  
- APIRequest : Es la clase encargada de las conexiones como hacer los request con alamofire. 
+   -APIRequest : Es la clase encargada de las conexiones como hacer los request con alamofire. 
  
  Helper 
  
-   Contiene clases que se ocupan como extensiones para poder volver a utilizar en otros proyectos o en el mismo proyecto
+    Contiene clases que se ocupan como extensiones para poder volver a utilizar en otros proyectos o en el mismo proyecto
+    
+   -Locale+Extensions : tiene funciones como una que devuelve el idioma del dispositivo 
+   
+   -Error+Extensions: Maneja los errores en la aplicación 
+   
+   -UIImageView+Extensions : Maneja el load de las imagenes asi como el cache 
+   
+ View
+ 
+     La vista es el elemento visual que se muestra. Todos los componentes de la interfaz de usuario en una pantalla de aplicación son vistas. La vista solo contiene la lógica de la interfaz de usuario, como la representación de datos, la navegación, etc. La vista posee el modelo de vista.
+     
+     -MoviesViewController  Contiene el viewcontroller donde muestra un collection de peliculas dependiendo la categoria, top,becoming y mas popular, contiene el tabbar y el buscador online offline
+     
+     -DetailViewController. Contiene el viewcontroller de detalle,muestra el detalle de la pelicula seleccionada 
+     
+     -VideoViewController. Contiene el viewcontroller que tiene embebido un webview para cargar el video de youtube.
+     
+     
+     
+
+
+ 
+   
+   
  
  
  
