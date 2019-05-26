@@ -141,6 +141,25 @@
                                     <constraint firstAttribute="height" constant="183" id="ezc-N5-v9Q"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6h-E6-vws">
+                                <rect key="frame" x="51" y="123.5" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="BT0-MZ-j8a"/>
+                                    <constraint firstAttribute="height" constant="64" id="Yg1-x0-AtU"/>
+                                </constraints>
+                                <state key="normal" image="play-button-2"/>
+                                <connections>
+                                    <action selector="buttonPlayVideoAction:" destination="FdS-Ao-IIs" eventType="touchUpInside" id="Wne-Ih-IcB"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Una-mh-fTz">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="7qD-W8-4Ho"/>
+                                    <constraint firstAttribute="width" constant="37" id="diI-9b-lX7"/>
+                                </constraints>
+                                <color key="color" red="0.2038268745" green="0.4887216687" blue="0.96475285290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -153,11 +172,15 @@
                             <constraint firstItem="EVA-6i-vzV" firstAttribute="top" secondItem="8qE-XP-Sr0" secondAttribute="top" id="IA4-VD-www"/>
                             <constraint firstItem="EVA-6i-vzV" firstAttribute="leading" secondItem="8T3-pj-3Ou" secondAttribute="leading" id="JJU-pv-6Fr"/>
                             <constraint firstItem="HBG-cO-VT5" firstAttribute="trailing" secondItem="Dw6-TH-yQl" secondAttribute="trailing" id="JcG-eC-ed0"/>
+                            <constraint firstItem="z6h-E6-vws" firstAttribute="centerY" secondItem="srh-vx-LeH" secondAttribute="centerY" id="M1l-rV-e3L"/>
                             <constraint firstItem="uOg-2l-Hdf" firstAttribute="leading" secondItem="8T3-pj-3Ou" secondAttribute="leading" id="Mhr-Jh-CIi"/>
                             <constraint firstItem="HBG-cO-VT5" firstAttribute="bottom" secondItem="Dw6-TH-yQl" secondAttribute="bottom" id="Rcq-QT-zoM"/>
+                            <constraint firstItem="Una-mh-fTz" firstAttribute="centerY" secondItem="8qE-XP-Sr0" secondAttribute="centerY" id="Wkn-Gd-sho"/>
                             <constraint firstItem="srh-vx-LeH" firstAttribute="top" secondItem="8T3-pj-3Ou" secondAttribute="top" constant="20" id="XdH-Gh-Rq3"/>
                             <constraint firstItem="uOg-2l-Hdf" firstAttribute="trailing" secondItem="8T3-pj-3Ou" secondAttribute="trailing" id="ZLy-Ig-tjq"/>
                             <constraint firstItem="8T3-pj-3Ou" firstAttribute="trailing" secondItem="Dw6-TH-yQl" secondAttribute="trailing" constant="10" id="eKO-ft-UEw"/>
+                            <constraint firstItem="z6h-E6-vws" firstAttribute="centerX" secondItem="srh-vx-LeH" secondAttribute="centerX" id="fJy-Y9-ZRE"/>
+                            <constraint firstItem="Una-mh-fTz" firstAttribute="centerX" secondItem="8qE-XP-Sr0" secondAttribute="centerX" id="krw-xz-KZg"/>
                             <constraint firstAttribute="bottom" secondItem="EVA-6i-vzV" secondAttribute="bottom" id="nmz-SO-BeP"/>
                             <constraint firstItem="Dw6-TH-yQl" firstAttribute="leading" secondItem="srh-vx-LeH" secondAttribute="trailing" constant="10" id="u11-gv-kAy"/>
                             <constraint firstItem="Dw6-TH-yQl" firstAttribute="bottom" secondItem="srh-vx-LeH" secondAttribute="bottom" id="vQH-XO-XlX"/>
@@ -171,19 +194,68 @@
                         <outlet property="descriptionLabel" destination="nFP-LI-qP5" id="XfQ-Bv-1Bl"/>
                         <outlet property="descrriptionTextView" destination="I1c-3t-Im9" id="iMJ-rC-vME"/>
                         <outlet property="languageLabel" destination="75U-Tm-Dua" id="DCp-lX-6TF"/>
+                        <outlet property="loadActivittyIndicator" destination="Una-mh-fTz" id="3fJ-JT-RbA"/>
                         <outlet property="movieUIImageView" destination="EVA-6i-vzV" id="hVR-Rd-VAM"/>
+                        <outlet property="playVideoButton" destination="z6h-E6-vws" id="8DL-8I-vg2"/>
                         <outlet property="rateCosmos" destination="rIP-ds-9LB" id="Eca-SH-eev"/>
                         <outlet property="ratingLabel" destination="Emo-Ae-fDt" id="JcW-kq-ywg"/>
                         <outlet property="thumbMovieImageView" destination="srh-vx-LeH" id="hiz-I5-Zjr"/>
                         <outlet property="titleLabel" destination="u3u-jD-6Hn" id="SdH-fr-FEd"/>
+                        <segue destination="i23-dd-WQz" kind="show" identifier="SegueVideo" id="h9d-lq-y2e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYl-K6-5Sp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-42" y="50"/>
         </scene>
+        <!--Video View Controller-->
+        <scene sceneID="d6h-TT-qae">
+            <objects>
+                <viewController id="i23-dd-WQz" customClass="VideoViewController" customModule="MovieRappiTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qmr-kI-YeD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNZ-TD-xso">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jxz-ev-TkH">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="eKq-yR-T4q"/>
+                                    <constraint firstAttribute="width" constant="37" id="y4q-Ur-J4d"/>
+                                </constraints>
+                                <color key="color" red="0.2038268745" green="0.4887216687" blue="0.96475285290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jxz-ev-TkH" firstAttribute="centerX" secondItem="qmr-kI-YeD" secondAttribute="centerX" id="I3r-D3-qjW"/>
+                            <constraint firstItem="hNZ-TD-xso" firstAttribute="leading" secondItem="Zcw-TW-tYX" secondAttribute="leading" id="JMI-7j-ui3"/>
+                            <constraint firstItem="hNZ-TD-xso" firstAttribute="top" secondItem="qmr-kI-YeD" secondAttribute="top" id="Tk3-Ib-GwN"/>
+                            <constraint firstItem="hNZ-TD-xso" firstAttribute="trailing" secondItem="Zcw-TW-tYX" secondAttribute="trailing" id="iIn-iI-d63"/>
+                            <constraint firstAttribute="bottom" secondItem="hNZ-TD-xso" secondAttribute="bottom" id="whm-Kp-Snm"/>
+                            <constraint firstItem="jxz-ev-TkH" firstAttribute="centerY" secondItem="qmr-kI-YeD" secondAttribute="centerY" id="zr6-z2-qon"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zcw-TW-tYX"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadActivityIndicator" destination="jxz-ev-TkH" id="smE-51-qeV"/>
+                        <outlet property="webView" destination="hNZ-TD-xso" id="Tko-Jg-GsK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yz9-9x-tix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="50"/>
+        </scene>
     </scenes>
     <resources>
         <image name="adultmovie" width="512" height="512"/>
+        <image name="play-button-2" width="64" height="64"/>
     </resources>
 </document>

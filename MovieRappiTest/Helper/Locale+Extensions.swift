@@ -11,10 +11,10 @@ extension Locale {
     static var preferredLanguageIdentifier: String {
         let id = Locale.preferredLanguages.first!
         let comps = Locale.components(fromIdentifier: id)
-        
-        if comps.values.first! == "es"{
+
+        if comps.values.first! == "es" {
             return "es-ES"
-        }else{
+        } else {
             return "en-US"
         }
     }

@@ -14,7 +14,7 @@ struct APIRequest {
     static let baseURL = "https://api.themoviedb.org/"
 
     static let api_key = "2b6ef75c27b8c44c0d5e8c0c05db49ee"
-    static let language:String = Locale.preferredLanguageIdentifier
+    static let language: String = Locale.preferredLanguageIdentifier
     static let version_api_movies = "3"
     static let apiURL = baseURL
 
@@ -23,7 +23,6 @@ struct APIRequest {
     var params: Parameters?
     var encoding: ParameterEncoding?
     var headers: HTTPHeaders?
-    
 
     init(_ url: String, method: Alamofire.HTTPMethod, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.httpBody,
          headers: HTTPHeaders? = nil) {
@@ -58,10 +57,15 @@ struct APIRequest {
         return APIRequest(apiURL + "\(version_api_movies)/movie/top_rated?" + "api_key=\(api_key)" + "&language=\(language)&page=1", method: .get, parameters: nil, encoding: JSONEncoding.default)
     }
 
-    // Get a fetch of the upcoming movies
+    // Get fetch of the upcoming movies
     // Movie/topRanked
 
     static func getListUpcoming() -> APIRequest {
         return APIRequest(apiURL + "\(version_api_movies)/movie/upcoming?" + "api_key=\(api_key)" + "&language=\(language)&page=1", method: .get, parameters: nil, encoding: JSONEncoding.default)
+    }
+
+    // Get fetch of videos
+    static func getListVideos(idMovie: String) -> APIRequest {
+        return APIRequest(apiURL + "\(version_api_movies)/movie/\(idMovie)/videos?" + "api_key=\(api_key)" + "&language=\(language)", method: .get, parameters: nil, encoding: JSONEncoding.default)
     }
 }

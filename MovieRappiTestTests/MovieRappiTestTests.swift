@@ -12,7 +12,7 @@ import XCTest
 
 class MovieRappiTestTests: XCTestCase {
     override func setUp() {
-        testApiRequest()
+       // testApiRequest()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 

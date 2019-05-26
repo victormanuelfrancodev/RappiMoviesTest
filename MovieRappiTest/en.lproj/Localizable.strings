@@ -14,4 +14,5 @@
 "Search movies" = "Search movies";
 "Empty List" = "Empty List";
 "Language" = "Language";
-
+"There was an error loading the video" = "There was an error loading the video";
+"Possibly we don't have video for this movie" = "Possibly we don't have video for this movie";

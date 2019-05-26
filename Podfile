@@ -13,6 +13,7 @@ target 'MovieRappiTest' do
   pod 'SCLAlertView'  
   pod 'Cosmos'  
   pod 'Hero'
+ 
   target 'MovieRappiTestTests' do
     inherit! :search_paths
     # Pods for testing

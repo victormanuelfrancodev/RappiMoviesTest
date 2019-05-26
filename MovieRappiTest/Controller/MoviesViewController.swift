@@ -6,11 +6,11 @@
 //  Copyright © 2019 Victor Manuel Lagunas Franco. All rights reserved.
 //
 
+import Hero
 import Reachability
 import RealmSwift
 import SCLAlertView
 import UIKit
-import Hero
 
 class MoviesViewController: UIViewController {
     // Realm
@@ -38,8 +38,6 @@ class MoviesViewController: UIViewController {
         setupNavigator()
         setupSearchController()
     }
-    
-   
 
     func setupSearchController() {
         let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
