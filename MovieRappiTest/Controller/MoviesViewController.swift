@@ -38,7 +38,7 @@ class MoviesViewController: UIViewController {
         setupNavigator()
         setupSearchController()
     }
-
+//Setup de search controller 
     func setupSearchController() {
         let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes, for: .normal)
@@ -61,7 +61,7 @@ class MoviesViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = NSLocalizedString("Best Popularity", comment: "Best Popularity")
     }
-
+//Settup del tab bar
     func setupTabBar() {
         let movieTabBar = UITabBar()
         movieTabBar.barTintColor = UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 0.8)
@@ -101,19 +101,19 @@ class MoviesViewController: UIViewController {
             SCLAlertView().showWarning(NSLocalizedString("Important info", comment: "Important info"), subTitle: NSLocalizedString("Could not start reachability notifier", comment: "Could not start reachability notifier"))
         }
     }
-
+//Almacena en realm los datos para persistencia
     func createMoviesPopular(response: Movies.Fetch.MovieModel) {
         MoviesPopularRLM().intFromResponse(response: response)
     }
-
+//Almacena en realm los datos para persistencia
     func createMoviesTopRanked(response: Movies.Fetch.MovieModel) {
         MoviesTopRankedRLM().intFromResponse(response: response)
     }
-
+//Almacena en realm los datos para persistencia
     func createMoviesUpcoming(response: Movies.Fetch.MovieModel) {
         MoviesUpcomingRLM().intFromResponse(response: response)
     }
-
+//se ocupa reachability para saber cuando tiene y no tiene conexion  el dispositivo
     @objc func reachabilityChanged(note: Notification) {
         let reachability = note.object as! Reachability
         switch reachability.connection {
@@ -134,7 +134,7 @@ class MoviesViewController: UIViewController {
         movieCollectionView.reloadData()
         loadActivityIndicator.stopAnimating()
     }
-
+    //Realiza peticiones al servidor para obtener las peliculas y videos del manager conection
     func getMovies() {
         getTopRankedMoviesFromService()
         getPopularRankedMoviesFromService()
@@ -203,7 +203,9 @@ class MoviesViewController: UIViewController {
 
     //  }
 }
-
+//Menu de tabbar si selecciona 0 se va al best popularity
+// 1 se ca a top ranked
+//2 se va a upcoming
 extension MoviesViewController: UITabBarDelegate {
     func tabBar(_: UITabBar, didSelect item: UITabBarItem) {
         switch item.tag {
@@ -233,7 +235,7 @@ extension MoviesViewController: UITabBarDelegate {
         }
     }
 }
-
+//Collection extension
 extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         movieSelected = movies[indexPath.row]
@@ -267,7 +269,7 @@ extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDele
             return movies.count
         }
     }
-
+//Se elimina el espacio entre collections cell
     func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, minimumLineSpacingForSectionAt _: Int) -> CGFloat {
         return 0.0
     }
@@ -288,7 +290,7 @@ extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDele
         }
     }
 }
-
+//Extension de busqueda
 extension MoviesViewController: UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
     func searchBarCancelButtonClicked(_: UISearchBar) {
         searchActive = false
