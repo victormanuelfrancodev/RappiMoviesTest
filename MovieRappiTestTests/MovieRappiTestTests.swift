@@ -13,6 +13,7 @@ import XCTest
 class MovieRappiTestTests: XCTestCase {
     
     override func setUp() {
+        language()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
@@ -77,5 +78,11 @@ class MovieRappiTestTests: XCTestCase {
             }
         })
         waitForExpectations(timeout: 5.0, handler: nil)
+    }
+    
+    func language(){
+        // XCTAssertEqual(Locale.preferredLanguageIdentifier, "es-ES")
+        //en-US
+         XCTAssertEqual(Locale.preferredLanguageIdentifier, "en-US")
     }
 }
