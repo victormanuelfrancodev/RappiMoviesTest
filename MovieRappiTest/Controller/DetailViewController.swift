@@ -28,10 +28,10 @@ class DetailViewController: UIViewController {
     let reachability = Reachability()!
     // Video
     var videos: [Videos.Fetch.VideoModel.Video] = []
-    @IBOutlet weak var loadActivittyIndicator: UIActivityIndicatorView!
-    var videoKey:String?
-    
-    @IBOutlet weak var playVideoButton: UIButton!
+    @IBOutlet var loadActivittyIndicator: UIActivityIndicatorView!
+    var videoKey: String?
+
+    @IBOutlet var playVideoButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigator()
@@ -148,32 +148,33 @@ class DetailViewController: UIViewController {
                     } else {
                         SCLAlertView().showWarning("Warning", subTitle: error.debugDescription)
                     }
-                    if !self.videos.isEmpty{
+                    if !self.videos.isEmpty {
                         self.videoKey = self.videos[0].key
-                    }else{
-                          SCLAlertView().showWarning(NSLocalizedString("Important info", comment: "Important info"), subTitle: NSLocalizedString("Possibly we don't have video for this movie", comment: "Possibly we don't have video for this movie"))
+                    } else {
+                        SCLAlertView().showWarning(NSLocalizedString("Important info", comment: "Important info"), subTitle: NSLocalizedString("Possibly we don't have video for this movie", comment: "Possibly we don't have video for this movie"))
                         self.playVideoButton.isHidden = true
                     }
-                     self.loadActivittyIndicator.stopAnimating()
+                    self.loadActivittyIndicator.stopAnimating()
                 })
             }
         }
     }
-    @IBAction func buttonPlayVideoAction(_ sender: Any) {
-        performSegue(withIdentifier:"SegueVideo", sender: nil)
+
+    @IBAction func buttonPlayVideoAction(_: Any) {
+        performSegue(withIdentifier: "SegueVideo", sender: nil)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let video = videoKey{
+
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        if let video = videoKey {
             DispatchQueue.main.async {
                 let videoVC = segue.destination as! VideoViewController
                 videoVC.videoID = video
             }
-        }else{
-             SCLAlertView().showWarning(NSLocalizedString("Important info", comment: "Important info"), subTitle: NSLocalizedString("There was an error loading the video", comment: "There was an error loading the video"))
+        } else {
+            SCLAlertView().showWarning(NSLocalizedString("Important info", comment: "Important info"), subTitle: NSLocalizedString("There was an error loading the video", comment: "There was an error loading the video"))
         }
     }
-    
+
     @objc func reachabilityChanged(note: Notification) {
         let reachability = note.object as! Reachability
         switch reachability.connection {
@@ -188,7 +189,6 @@ class DetailViewController: UIViewController {
         case .none:
             print("none")
             playVideoButton.isHidden = true
-            
         }
     }
 }
