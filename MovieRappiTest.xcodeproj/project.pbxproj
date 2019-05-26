@@ -23,7 +23,6 @@
 		5724B2B822942B19003392CF /* MovieRappiTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724B2B722942B19003392CF /* MovieRappiTestTests.swift */; };
 		5724B2C322942B19003392CF /* MovieRappiTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724B2C222942B19003392CF /* MovieRappiTestUITests.swift */; };
 		5724B2DE22943B9B003392CF /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724B2DD22943B9B003392CF /* APIRequest.swift */; };
-		5724B2E12294400F003392CF /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724B2E02294400F003392CF /* String+Extensions.swift */; };
 		5724B2E322944048003392CF /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724B2E222944048003392CF /* Locale+Extensions.swift */; };
 		5724B2E522944124003392CF /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724B2E422944124003392CF /* Bundle+Extensions.swift */; };
 		5724B2E722952CFE003392CF /* Error+MovieRappi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724B2E622952CFE003392CF /* Error+MovieRappi.swift */; };
@@ -86,7 +85,6 @@
 		5724B2C222942B19003392CF /* MovieRappiTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRappiTestUITests.swift; sourceTree = "<group>"; };
 		5724B2C422942B19003392CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5724B2DD22943B9B003392CF /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		5724B2E02294400F003392CF /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		5724B2E222944048003392CF /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		5724B2E422944124003392CF /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		5724B2E622952CFE003392CF /* Error+MovieRappi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+MovieRappi.swift"; sourceTree = "<group>"; };
@@ -252,7 +250,6 @@
 		5724B2DF22943F67003392CF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				5724B2E02294400F003392CF /* String+Extensions.swift */,
 				5724B2E222944048003392CF /* Locale+Extensions.swift */,
 				5724B2E422944124003392CF /* Bundle+Extensions.swift */,
 				5724B2E622952CFE003392CF /* Error+MovieRappi.swift */,
@@ -531,7 +528,6 @@
 				5722451B2297088A00F581F8 /* MoviesUpcomingRLM.swift in Sources */,
 				572245062296BF6000F581F8 /* UIImageView+Extensions.swift in Sources */,
 				5724B2E92295320C003392CF /* MovieManager.swift in Sources */,
-				5724B2E12294400F003392CF /* String+Extensions.swift in Sources */,
 				5724B2A522942B15003392CF /* MoviesViewController.swift in Sources */,
 				57564AA22299D24700C4326E /* VideoViewController.swift in Sources */,
 				5722450422969F5C00F581F8 /* MovieCollectionViewCell.swift in Sources */,
