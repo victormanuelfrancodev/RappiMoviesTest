@@ -17,13 +17,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet var starsCosmos: CosmosView!
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var viewsLabel: UILabel!
-
-    var parallaxOffset: CGFloat = 0 {
-        didSet {
-            centerViewImagen.constant = parallaxOffset
-        }
-    }
-
+    //Obtengo el modelo de datos de movie
     var movie: Movies.Fetch.MovieModel.Movie? {
         didSet {
             if let movie = movie {
@@ -46,7 +40,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+//efecto cuando dan click a la celda 
     override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
