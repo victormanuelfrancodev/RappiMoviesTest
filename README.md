@@ -79,7 +79,7 @@ Model
    
    Qué características tiene, según su opinión, un “buen” código o código limpio
    
-   Un buen código es aquel que cualquiera que lo tome lo pueda entender sin problemas, que sea posible de escalar y modificar sin tener clases "amarradas a el", tener una buena arquitectura dentro del proyecto, tener nombres entendibles en las funciones,clases y variables, tener indexado el código y ordenado por carpetas; también tener las librerias necesarias y actualizado el codigo para cualquier actualización futura.
+   Un buen código es aquel que cualquiera que lo tome lo pueda entender sin problemas,que tenga sus respectivas Unit Test que sea posible de escalar y modificar sin tener clases "amarradas a el", tener una buena arquitectura dentro del proyecto, tener nombres entendibles en las funciones,clases y variables, tener indexado el código y ordenado por carpetas; también tener las librerias necesarias y actualizado el codigo para cualquier actualización futura.
    
  
  
