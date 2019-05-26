@@ -150,6 +150,7 @@ class MoviesViewController: UIViewController {
                         self.createMoviesUpcoming(response: results)
                         self.movieCollectionView.reloadData()
                     }
+                   
                 } else {
                     SCLAlertView().showWarning("Warning", subTitle: error.debugDescription)
                 }
