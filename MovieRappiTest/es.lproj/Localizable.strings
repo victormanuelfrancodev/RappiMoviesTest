@@ -14,3 +14,5 @@
 "Search movies" = "Buscar películas";
 "Empty List" = "Lista vacia";
 "Language" = "Idioma";
+"There was an error loading the video" = "Hubo un error al cargar el vídeo";
+"Possibly we don't have video for this movie" = "Posiblemente no tenemos vídeo para esta pelicula";

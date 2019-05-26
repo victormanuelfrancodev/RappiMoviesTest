@@ -6,6 +6,7 @@
 //  Copyright © 2019 Victor Manuel Lagunas Franco. All rights reserved.
 //
 
+import Hero
 import Reachability
 import RealmSwift
 import SCLAlertView

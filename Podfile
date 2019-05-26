@@ -12,6 +12,8 @@ target 'MovieRappiTest' do
   pod 'ReachabilitySwift'
   pod 'SCLAlertView'  
   pod 'Cosmos'  
+  pod 'Hero'
+ 
   target 'MovieRappiTestTests' do
     inherit! :search_paths
     # Pods for testing

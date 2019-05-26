@@ -30,6 +30,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
                 titleMovieLabel.text = movie.title
                 if let poster_path = movie.poster_path {
                     movieImageView.cacheImage(imageUrlString: poster_path)
+                    movieImageView.hero.id = poster_path
                 }
                 if let vote_average = movie.vote_average {
                     starsCosmos.rating = vote_average * 5 / 10
