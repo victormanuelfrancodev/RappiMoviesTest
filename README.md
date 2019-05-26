@@ -56,19 +56,30 @@ Model
  View
  
      La vista es el elemento visual que se muestra. Todos los componentes de la interfaz de usuario en una pantalla de aplicación son vistas. La vista solo contiene la lógica de la interfaz de usuario, como la representación de datos, la navegación, etc. La vista posee el modelo de vista.
-     
-     -MoviesViewController  Contiene el viewcontroller donde muestra un collection de peliculas dependiendo la categoria, top,becoming y mas popular, contiene el tabbar y el buscador online offline
-     
-     -DetailViewController. Contiene el viewcontroller de detalle,muestra el detalle de la pelicula seleccionada 
-     
-     -VideoViewController. Contiene el viewcontroller que tiene embebido un webview para cargar el video de youtube.
-     
-     
-     
-
-
+    
  
+   -MoviesViewController  Contiene el viewcontroller donde muestra un collection de peliculas dependiendo la categoria, top,becoming y mas popular, contiene el tabbar y el buscador online offline
+     
+   -DetailViewController. Contiene el viewcontroller de detalle,muestra el detalle de la pelicula seleccionada 
+     
+   -VideoViewController. Contiene el viewcontroller que tiene embebido un webview para cargar el video de youtube.
+     
    
+# Preguntas
+
+   ¿En qué consiste el principio de responsabilidad única? Cuál es su propósito?
+   
+   Consiste que cada modulo o clase debe tener una responsabilidad sobre el sistema, tiene varios propositos: 
+   -No afectar en cambios futuros a otros modulos
+   -Realizar correctas y faciles pruebas unitarias
+   -Hacer mas legible y ordenado el código
+   -Encontrar y corregir problemas en el código
+   -Poder reciclar el modulo en el mismo proyecto u en otro.
+   -Facilidad de escalamiento 
+   
+   Qué características tiene, según su opinión, un “buen” código o código limpio
+   
+   Un buen código es aquel que cualquiera que lo tome lo pueda entender sin problemas, que sea posible de escalar y modificar sin tener clases "amarradas a el", tener una buena arquitectura dentro del proyecto, tener nombres entendibles en las funciones,clases y variables, tener indexado el código y ordenado por carpetas; también tener las librerias necesarias y actualizado el codigo para cualquier actualización futura.
    
  
  
