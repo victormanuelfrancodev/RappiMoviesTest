@@ -4,8 +4,11 @@
      title="Movie Test" width="220" height="178">
 
 .
-Modelo
-     Contiene objetos de acceso a datos y lógica de validación. Sabe cómo leer y escribir datos, y notifica al modelo de vista     cuando los datos cambian
+La arquitectura que ocupe fue la de MVVM, tenía otra opción que era ocupar Clean architecture pero llegue a la conclusión que el proyecto era pequeño para implementar una arquitectura grande, en un libro decia: "no intentes matar moscas a cañonazos" y me guie de esa frase, aparte que MVVM es recomendada por apple para una buena arquitectura en aplicaciones con swift. 
+
+Model
+
+     El modelo es básicamente el modelo de datos o entidades que tiene su aplicación. Son simplemente estructuras o clases con propiedades asociadas simples. En la práctica general, simplemente retienen los datos que se han mapeado de su estructura de datos sin procesar que pueden provenir de su API u otras fuentes, como archivos SQLite, etc.
      
 * Capa persistencia: 
     
@@ -20,4 +23,7 @@ Modelo
     MoviesTopRankedRLM: encapsula en realm las peliculas top ranked
     
     MoviesUpcomingRLM: encapsula en realm las peliculas upcoming
-    
+   
+ View Model 
+ 
+    Los modelos de vista reciben eventos de IU y realizan la lógica de negocios y proporcionan el resultado que se mostrará en la IU. Este es el componente que se encarga de manejar la lógica empresarial que controla la vista. Pero internamente no modifica la interfaz de usuario, ni tiene ninguna referencia a la vista. Posee el modelo de datos.
