@@ -64,6 +64,9 @@ Model
      
    -VideoViewController. Contiene el viewcontroller que tiene embebido un webview para cargar el video de youtube.
      
+   Unit Test
+   
+   MovieRappiTestTests : Se implenentan pruebas para los request al servidor. 
    
 # Preguntas
 
